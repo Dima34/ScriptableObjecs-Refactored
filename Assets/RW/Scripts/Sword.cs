@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using System;
 
+[Serializable]
 public class Sword : MonoBehaviour
 {
     [SerializeField]
@@ -8,6 +10,6 @@ public class Sword : MonoBehaviour
     GameEvent _onSwordClick;
     
     private void OnMouseDown() {
-        _onSwordClick.Fire();
+        _onSwordClick.Fire(_swordData);
     }
 }
